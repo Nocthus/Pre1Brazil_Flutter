@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "148220061490",
+    "firebase_url": "https://pre1brazil-a5e34.firebaseio.com",
+    "project_id": "pre1brazil-a5e34",
+    "storage_bucket": "pre1brazil-a5e34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148220061490:android:670139feb7f968b07c992b",
+        "android_client_info": {
+          "package_name": "com.unifor.pre1brazil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148220061490-m92tq0q6frqaejltcuqhop1b11e62q0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unifor.pre1brazil",
+            "certificate_hash": "ee90245bb0fa374676d1ad79ba653fdd446add3d"
+          }
+        },
+        {
+          "client_id": "148220061490-akiop3jb0bufag5nn3g6krroi22ln84v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9h6Z75EKEfLeDE8AYhZp9eOBXj19QZYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148220061490-akiop3jb0bufag5nn3g6krroi22ln84v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
