@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pre1brazil/home.dart';
+import 'package:pre1brazil/ui/home.dart';
 
 
 
@@ -44,6 +44,8 @@ class _RegisterAPageState extends State<RegisterAPage> {
       return null;
     }
   }
+
+  String teste(){}
 
   String pwdValidator(String value) {
     if (value.length < 8) {

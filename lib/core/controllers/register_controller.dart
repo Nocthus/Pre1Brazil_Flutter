@@ -1,5 +1,5 @@
 import 'package:mobx/mobx.dart';
-import 'package:pre1brazil/models/register_model.dart';
+import 'package:pre1brazil/core/models/register_model.dart';
 part 'register_controller.g.dart';
 
 class RegisterController = _RegisterControllerBase with _$RegisterController;

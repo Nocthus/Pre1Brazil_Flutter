@@ -1,17 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pre1brazil/home.dart';
 
-class RegisterreturnPage extends StatefulWidget {
-  RegisterreturnPage({Key key}) : super(key: key);
+import 'package:pre1brazil/ui/home.dart';
+
+class RegisterpacientPage extends StatefulWidget {
+  RegisterpacientPage({Key key}) : super(key: key);
 
   @override
-  _RegisterreturnPageState createState() => _RegisterreturnPageState();
+  _RegisterpacientPageState createState() => _RegisterpacientPageState();
 }
 
-class _RegisterreturnPageState extends State<RegisterreturnPage> {
+class _RegisterpacientPageState extends State<RegisterpacientPage> {
   final GlobalKey<FormState> _registerpacientFormKey = GlobalKey<FormState>();
+  TextEditingController nameInputController;
+  TextEditingController cpfInputController;
+  TextEditingController glicemia1exameInputController;
+  TextEditingController glicemia2exameInputController;
+  TextEditingController hemoglibina1exameInputController;
+  TextEditingController hemoglibina2exameInputController;
+  TextEditingController vitaminaddoseInputController;
+  TextEditingController vitaminadtempoInputController;
+  TextEditingController peptideovalorInputController;
+  TextEditingController insulinabasalInputController;
+  TextEditingController tshInputController;
+  TextEditingController creatininaInputController;
+  TextEditingController ohvidInputController;
+  TextEditingController antitpoInputController;
+  TextEditingController colesteroltotalInputController;
+  TextEditingController hdlInputController;
+  TextEditingController ldlInputController;
+  TextEditingController triglicerideosInputController;
+  TextEditingController perfillipidicoInputController;
+  TextEditingController homabInputController;
+  TextEditingController homairInputController;
+  TextEditingController antitgInputController;
+
   bool isSwitched = true;
   List<DropdownMenuItem<int>> listDrop = [];
   List<DropdownMenuItem<String>> listDropgender = [];
@@ -37,6 +61,28 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
 
   @override
   initState() {
+    nameInputController = new TextEditingController();
+    cpfInputController = new TextEditingController();
+    glicemia1exameInputController = new TextEditingController();
+    glicemia2exameInputController = new TextEditingController();
+    hemoglibina1exameInputController = new TextEditingController();
+    hemoglibina2exameInputController = new TextEditingController();
+    vitaminaddoseInputController = new TextEditingController();
+    vitaminadtempoInputController = new TextEditingController();
+    peptideovalorInputController = new TextEditingController();
+    insulinabasalInputController = new TextEditingController();
+    tshInputController = new TextEditingController();
+    creatininaInputController = new TextEditingController();
+    ohvidInputController = new TextEditingController();
+    antitpoInputController = new TextEditingController();
+    colesteroltotalInputController = new TextEditingController();
+    hdlInputController = new TextEditingController();
+    ldlInputController = new TextEditingController();
+    triglicerideosInputController = new TextEditingController();
+    perfillipidicoInputController = new TextEditingController();
+    homabInputController = new TextEditingController();
+    homairInputController = new TextEditingController();
+    antitgInputController = new TextEditingController();
     super.initState();
   }
 
@@ -59,6 +105,8 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
     }
   }
 
+  String teste(){}
+
   @override
   Widget build(BuildContext context) {
     loadData();
@@ -76,11 +124,13 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
                   TextFormField(
                     decoration:
                         InputDecoration(labelText: 'Nome:', hintText: "John"),
+                        controller: nameInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'CPF(somente numeros)*',
                         hintText: "99999999999"),
+                        controller: cpfInputController,
                   ),
                   TextFormField(
                     decoration:
@@ -107,10 +157,12 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Primeiro Exame*', hintText: ""),
+                        controller: glicemia1exameInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Segundo Exame*', hintText: ""),
+                        controller: glicemia2exameInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
@@ -122,10 +174,12 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Primeiro Exame*', hintText: ""),
+                        controller: hemoglibina1exameInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Segundo Exame*', hintText: ""),
+                        controller: hemoglibina2exameInputController,
                   ),
                   SwitchListTile(
                     value: isSwitched,
@@ -151,7 +205,7 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
                     title: const Text('Anti-GAD'),
                   ),
                   SwitchListTile(
-                    value: isSwitched,
+                    value: null,
                     onChanged: (value) {
                       setState(() {
                         isSwitched = value;
@@ -188,13 +242,15 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Qual a dose mensal?', hintText: ""),
+                        controller: vitaminaddoseInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Há quanto tempo?(semanas)', hintText: ""),
+                        controller: vitaminadtempoInputController,
                   ),
                   SwitchListTile(
-                    value: isSwitched,
+                    value: null,
                     onChanged: (value) {
                       setState(() {});
                     },
@@ -211,58 +267,72 @@ class _RegisterreturnPageState extends State<RegisterreturnPage> {
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Valor', hintText: ""),
+                        controller: peptideovalorInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Insulina basal(mU/L)', hintText: ""),
+                        controller: insulinabasalInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'TSH(mU/L)', hintText: ""),
+                        controller: tshInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Creatinina(mg/L)', hintText: ""),
+                        controller: creatininaInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: '25-OHViD(ng/ml)', hintText: ""),
+                        controller: ohvidInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'AntiTPO(UI/ml)', hintText: ""),
+                        controller: antitpoInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Colesterol total(mg/dL)', hintText: ""),
+                        controller: colesteroltotalInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'HDL(mg/dL)', hintText: ""),
+                        controller: hdlInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'LDL(mg/dL)', hintText: ""),
+                        controller: ldlInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Triglicerídeos(mg/dL)', hintText: ""),
+                        controller: triglicerideosInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Perfil lipídico', hintText: ""),
+                        controller: perfillipidicoInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'HOMA-B', hintText: ""),
+                        controller: homabInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'HOMA-IR', hintText: ""),
+                        controller: homairInputController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'AntiTG', hintText: ""),
+                        controller: antitpoInputController,
                   ),
                   RaisedButton(
                     child: Text("Registrar"),

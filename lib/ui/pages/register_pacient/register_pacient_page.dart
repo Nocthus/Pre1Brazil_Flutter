@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pre1brazil/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:pre1brazil/common_components/text_field.dart';
-import 'package:pre1brazil/controllers/loigin_controller.dart';
+import 'package:pre1brazil/core/controllers/loigin_controller.dart';
+import 'package:pre1brazil/ui/common_components/text_field.dart';
+import 'package:pre1brazil/ui/home.dart';
+
 
 class RegisterUpacientPage extends StatelessWidget {
   final controller = LoginController();

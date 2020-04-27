@@ -1,5 +1,5 @@
 import 'package:mobx/mobx.dart';
-import 'package:pre1brazil/models/login_model.dart';
+import 'package:pre1brazil/core/models/login_model.dart';
 part 'loigin_controller.g.dart';
 
 class LoginController = _LoginControllerBase with _$LoginController;

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pre1brazil/pages/login/login_page.dart';
-import 'package:pre1brazil/pages/register/register_page.dart';
-import 'task.dart';
-import 'register.dart';
-import 'splash.dart';
-import 'login.dart';
-import 'home.dart';
-
+import 'package:pre1brazil/ui/home.dart';
+import 'package:pre1brazil/ui/login.dart';
+import 'package:pre1brazil/ui/pages/login/login_page.dart';
+import 'package:pre1brazil/ui/pages/register/register_page.dart';
+import 'package:pre1brazil/ui/register.dart';
+import 'package:pre1brazil/ui/splash.dart';
+import 'package:pre1brazil/ui/task.dart';
 
 void main() => runApp(MyApp());
 

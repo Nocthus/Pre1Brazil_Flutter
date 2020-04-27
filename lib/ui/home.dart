@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pre1brazil/register_pacient.dart';
+import 'package:pre1brazil/ui/register_pacient.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title, this.uid})
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
   //           padding: const EdgeInsets.all(20.0),
   //           child: StreamBuilder<QuerySnapshot>(
   //             stream: Firestore.instance
-  //                 .collection("usuarios")
+  //                 .collection("pacientes")
   //                 .document(widget.uid)
   //                 .collection('tasks')
   //                 .snapshots(),

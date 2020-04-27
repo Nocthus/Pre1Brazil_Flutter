@@ -2,9 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:pre1brazil/common_components/text_form_field.dart';
-import 'package:pre1brazil/controllers/register_controller.dart';
-import 'package:pre1brazil/home.dart';
+import 'package:pre1brazil/core/controllers/register_controller.dart';
+import 'package:pre1brazil/ui/common_components/text_form_field.dart';
+import 'package:pre1brazil/ui/home.dart';
+
 
 class RegisterPage extends StatefulWidget {
   RegisterPage({Key key}) : super(key: key);
